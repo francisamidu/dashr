@@ -25,7 +25,7 @@ const CoinsContext = createContext<{ coins: CoinExtended[]; stats: IStat }>({
 
 export const CoinsContextProvider = ({
   children,
-}: PropsWithChildren<ReactNode>) => {
+}: Partial<PropsWithChildren<ReactNode>>) => {
   const [coins, setCoins] = useState<CoinExtended[]>([
     {
       id: uid(),

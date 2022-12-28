@@ -23,7 +23,7 @@ const AppContext = createContext<
 
 export const AppContextProvider = ({
   children,
-}: PropsWithChildren<ReactNode>) => {
+}: Partial<PropsWithChildren<ReactNode>>) => {
   const [data, setData] = useState({
     address: "0x000000000000000001010000",
     balance: 0,

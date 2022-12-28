@@ -23,7 +23,7 @@ const TransactionsContext = createContext<{
 
 export const TransactionsContextProvider = ({
   children,
-}: PropsWithChildren<ReactNode>) => {
+}: Partial<PropsWithChildren<ReactNode>>) => {
   const { account: userAccount } = useAccount();
   const [transactionCount, setTransactionCount] = useState(0);
   const [transactions, setTransactions] = useState<
@@ -31,7 +31,6 @@ export const TransactionsContextProvider = ({
   >([]);
   const getTransactions = async () => {
     try {
-      
     } catch (error) {
       console.log(error);
       toast.error("Couldnt fetch transactions");

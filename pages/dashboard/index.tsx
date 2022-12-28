@@ -17,17 +17,11 @@ import {
 } from "../../helpers";
 import { useAccount, useTransactions } from "../../contexts";
 import { headers } from "../../constants";
-import { useMoralis, useNativeBalance } from "react-moralis";
 import { ethers } from "ethers";
 
 const Dashboard = () => {
   const { count, getTransactions, transactions } = useTransactions();
   const { setBalance } = useAccount();
-  const { account: userAccount, user } = useMoralis();
-
-  const {
-    data: { balance, formatted },
-  } = useNativeBalance({ address: userAccount });
 
   const [status, setStatus] = useState([
     {
@@ -64,55 +58,6 @@ const Dashboard = () => {
       title: "Tokens traded",
     },
   ]);
-
-  useEffect(() => {
-    if (formatted) {
-      setBalance(balance);
-      const accountBalance = ethers.utils.formatEther(formatted);
-      const newStatus = status.map((s, index) => {
-        if (index == 0) {
-          return {
-            ...s,
-            count: accountBalance,
-          };
-        }
-        return s;
-      });
-      setStatus(newStatus);
-    }
-  }, [formatted]);
-
-  useEffect(() => {
-    if (count) {
-      const newStatus = status.map((s, index) => {
-        if (index == 1) {
-          return {
-            ...s,
-            count,
-          };
-        }
-        return s;
-      });
-      setStatus(newStatus);
-    }
-  }, [count]);
-
-  useEffect(() => {
-    getTransactions();
-    if (Object.values(user).some((val) => !!val)) {
-      const dateCreated = formatTimeRelative(user.attributes.createdAt);
-      const newStatus = status.map((s, index) => {
-        if (index == 2) {
-          return {
-            ...s,
-            count: dateCreated,
-          };
-        }
-        return s;
-      });
-      setStatus(newStatus);
-    }
-  }, []);
 
   return (
     <main className="px-6 sm:p-6">

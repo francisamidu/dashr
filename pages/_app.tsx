@@ -6,7 +6,6 @@ import "../styles/index.scss";
 import "tailwindcss/tailwind.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import { MoralisProvider } from "react-moralis";
 
 import {
   AccountProvider,
@@ -28,7 +27,6 @@ type AppPropsWithLayout = AppProps & {
 const App = ({ Component, pageProps }: AppPropsWithLayout): unknown => {
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    // <MoralisProvider appId="12345" serverUrl="moralis">
     <AccountProvider>
       <AppContextProvider>
         <ToastContainer />
@@ -43,7 +41,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout): unknown => {
         </TransactionsContextProvider>
       </AppContextProvider>
     </AccountProvider>
-    // </MoralisProvider>
   );
 };
 

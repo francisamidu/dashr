@@ -18,7 +18,7 @@ const NewsContext = createContext<News>({
 
 export const NewsContextProvider = ({
   children,
-}: PropsWithChildren<ReactNode>) => {
+}: Partial<PropsWithChildren<ReactNode>>) => {
   const [news, setNews] = useState<News["news"]>([
     {
       id: uid(),

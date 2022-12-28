@@ -32,9 +32,9 @@ const Header = () => {
           />
           <Image
             alt="Dashboard"
-            width="750"
-            height="600"
-            className="bg-transparent w-full"
+            width="650"
+            height="500"
+            className="bg-transparent"
             src="/dashboard.jpg"
           />
         </div>

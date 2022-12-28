@@ -30,7 +30,9 @@ const login = () => {
   return (
     <>
       <Head>
-        <title>Sign In - {name}</title>
+        <title>
+          <>Sign In - {name}</>
+        </title>
       </Head>
       <section className="grid grid-cols-1 sm:grid-cols-2 min-h-screen">
         <div className="col-start-1 col-end-2 flex flex-col justify-center py-5 sm:px-20 px-5">

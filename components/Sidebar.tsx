@@ -26,36 +26,36 @@ const Sidebar = () => {
       display: "Dashboard",
       icon: <IDashboard className="text-md mr-3 text-inherit" />,
     },
-    {
-      active: false,
-      display: "Transactions",
-      icon: <ICreditCard className="text-md mr-3 text-inherit" />,
-    },
-    {
-      active: false,
-      display: "Balances",
-      icon: <IWallet className="text-md mr-3 text-inherit" />,
-    },
+    // {
+    //   active: false,
+    //   display: "Transactions",
+    //   icon: <ICreditCard className="text-md mr-3 text-inherit" />,
+    // },
+    // {
+    //   active: false,
+    //   display: "Balances",
+    //   icon: <IWallet className="text-md mr-3 text-inherit" />,
+    // },
     {
       active: false,
       display: "Coins",
       icon: <ICoin className="text-md mr-3 text-inherit" />,
     },
-    {
-      active: false,
-      display: "Swap Tokens",
-      icon: <ISwap className="text-md mr-3 text-inherit" />,
-    },
+    // {
+    //   active: false,
+    //   display: "Swap Tokens",
+    //   icon: <ISwap className="text-md mr-3 text-inherit" />,
+    // },
     {
       active: false,
       display: "Mint NFT",
       icon: <IImageAlt className="text-md mr-3 text-inherit" />,
     },
-    {
-      active: false,
-      display: "NFTs",
-      icon: <IImage className="text-md mr-2 text-inherit" />,
-    },
+    // {
+    //   active: false,
+    //   display: "NFTs",
+    //   icon: <IImage className="text-md mr-2 text-inherit" />,
+    // },
     {
       active: false,
       display: "News",

@@ -7,7 +7,9 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>404 Not Found - {name}</title>
+        <title>
+          <>404 Not Found - {name}</>
+        </title>
       </Head>
       <section>
         <h1>Page Not Found</h1>

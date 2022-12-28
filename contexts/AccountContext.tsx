@@ -21,7 +21,9 @@ const AccountContext = createContext<Account>({
   setBalance: () => {},
 });
 
-export const AccountProvider = ({ children }: PropsWithChildren<ReactNode>) => {
+export const AccountProvider = ({
+  children,
+}: Partial<PropsWithChildren<ReactNode>>) => {
   const [account, setAccount] = useState("");
   const [balance, setBalance] = useState("");
 

@@ -58,11 +58,6 @@ const About = () => {
           The most intuitive web3 toolbox on the web. From transactions to
           account activity
         </h2>
-        <Button
-          text="Get Started"
-          onClick={() => redirect("/login")}
-          className="my-4 h-12 py-3 shadow-transparent hover:shadow-[#c9c9c9]"
-        />
         <div className="flex flex-row items-center justify-center mt-5">
           <Image
             alt="Dashboard"
@@ -83,6 +78,11 @@ const About = () => {
             ))}
           </div>
         </div>
+        <Button
+          text="Get Started"
+          onClick={() => redirect("/login")}
+          className="my-7 h-12 py-3 shadow-transparent hover:shadow-[#c9c9c9]"
+        />
       </div>
     </section>
   );
